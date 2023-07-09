@@ -1,0 +1,17 @@
+tree:
+  -
+    id: 8f48aa42-a561-40db-8edd-d0738c8c68fb
+    entry: home
+  -
+    id: 854b5a6f-75dc-4af2-b4d9-06e8dcbea851
+    entry: 104870a0-11c3-4766-9fa7-00d59ecafe13
+  -
+    id: cc7759b3-384c-42a1-968f-6f595ccd55ca
+    entry: 8e677c57-ebe8-4422-bbf8-cddcc4a0c2d6
+  -
+    id: 28629bbc-0ab7-49a2-8f4e-72e846779d7f
+    title: Categories
+    url: /categories
+  -
+    id: c9df6068-17f2-4457-8243-277e8b0417b5
+    entry: bd177cc0-23f9-40b2-a106-fa4b6aa4f37c

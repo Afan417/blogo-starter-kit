@@ -1,0 +1,16 @@
+<div class="container py-8 md:py-12">
+    {{ partial:components/heading size="h2" label="Results for: '{get:q}'" center="true" }}
+    {{ search:results as="results" }}
+        {{ if results }}
+            <ul class="grid gap-12 mt-8 md:grid-cols-2 lg:grid-cols-3 md:mt-12">
+                {{ results }}
+                    <li>
+                        {{ partial:components/post_card }}
+                    </li>
+                {{ /results }}
+            </ul>
+        {{ else }}
+            <p class="mt-8 text-center md:mt-12">No results found.</p>
+        {{ /if }}
+    {{ /search:results }}
+</div>

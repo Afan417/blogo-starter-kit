@@ -1,0 +1,40 @@
+title: Footer
+data:
+  copyright:
+    -
+      type: paragraph
+      content:
+        -
+          type: text
+          text: 'Copyright © 2023 Blogo. All rights reserved.'
+    -
+      type: paragraph
+      content:
+        -
+          type: text
+          text: 'Made by '
+        -
+          type: text
+          marks:
+            -
+              type: link
+              attrs:
+                href: 'https://github.com/afan417'
+                rel: noopener
+                target: _blank
+                title: null
+          text: 'Afan Ajdari'
+        -
+          type: text
+          text: ' · '
+        -
+          type: text
+          marks:
+            -
+              type: link
+              attrs:
+                href: 'https://github.com/afan417/blogo'
+                rel: noopener
+                target: _blank
+                title: null
+          text: Github

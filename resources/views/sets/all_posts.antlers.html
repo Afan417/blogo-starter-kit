@@ -1,0 +1,14 @@
+<div class="container py-8 md:py-12">
+    {{ collection:posts paginate="9" as="posts" }}
+        {{ if no_results }}
+            <p>Aww, there are no results.</p>
+        {{ /if }}
+        <div class="grid gap-12 md:grid-cols-2 lg:grid-cols-3">
+            {{ posts }}
+                {{ partial:components/post_card }}
+            {{ /posts }}
+        </div>
+
+        {{ partial:partials/pagination }}
+    {{ /collection:posts }}
+</div>

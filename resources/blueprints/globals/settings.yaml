@@ -1,0 +1,58 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        display: 'Global Settings'
+        fields:
+          -
+            handle: logo
+            field:
+              mode: list
+              container: assets
+              restrict: false
+              allow_uploads: true
+              show_filename: true
+              max_files: 1
+              display: Logo
+              type: assets
+              icon: assets
+              listable: hidden
+              instructions_position: above
+              read_only: false
+          -
+            handle: site_name
+            field:
+              character_limit: 0
+              type: text
+              display: 'Site Name'
+          -
+            handle: meta_description
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'Meta Description'
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+  social:
+    display: Social
+    fields:
+      -
+        handle: og_image
+        field:
+          mode: list
+          container: assets
+          restrict: false
+          allow_uploads: true
+          show_filename: true
+          max_files: 1
+          display: 'OG Image'
+          type: assets
+          icon: assets
+          listable: hidden
+          instructions_position: above
+          read_only: false

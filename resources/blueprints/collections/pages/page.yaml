@@ -1,0 +1,50 @@
+title: Page
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+      -
+        display: Builder
+        fields:
+          -
+            import: page_builder
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+          -
+            handle: parent
+            field:
+              type: entries
+              collections:
+                - pages
+              max_items: 1
+              listable: false
+              localizable: true
+          -
+            handle: show_title
+            field:
+              default: false
+              type: toggle
+              display: 'Show Title'
+              icon: toggle
+              instructions: 'Toggle this to show the Title of the page in the header.'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false

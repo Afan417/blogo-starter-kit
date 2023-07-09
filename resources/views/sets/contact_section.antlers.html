@@ -1,0 +1,72 @@
+<div class="container py-8 md:py-12">
+    <div class="grid md:grid-cols-2 md:gap-8">
+        <div class="my-8">
+            {{ if rich_text }}
+                <div class="max-w-md prose
+            prose-a:text-blue-500 prose-a:no-underline hover:prose-a:underline transition-all
+            prose-blockquote:border-blue-500
+            marker:text-blue-500
+            prose-pre:text-gray-800 prose-pre:bg-gray-300
+            prose-code:bg-gray-200 prose-code:text-red-700 prose-code:px-1 prose-code:py-0.5">
+                    {{ rich_text }}
+                </div>
+            {{ /if }}
+            {{ if contact_info }}
+                <div class="mt-5">
+                    {{ contact_info }}
+                        <div class="flex items-center mt-4 space-x-2 transition-all text-dark-600 hover:text-blue-500">
+                            {{ if select_type == 'email' }}
+                                {{ icon }}
+                                <a href="mailto:{{ text }}">{{ text }}</a>
+                            {{ elseif select_type == 'phone' }}
+                                {{ icon }}
+                                <a href="tel:{{ text }}">{{ text }}</a>
+                            {{ elseif select_type == 'location' }}
+                                {{ icon }}
+                                <span>{{ text }}</span>
+                            {{ else }}
+                                <span>{{ text }}</span>
+                            {{ /if }}
+                        </div>
+                    {{ /contact_info }}
+                </div>
+            {{ /if }}
+        </div>
+
+        <div>
+            {{ form:contact_form class="my-8" }}
+                {{ if success }}
+                    <div class="p-2 text-white bg-green-300 rounded-md">
+                        {{ success }}
+                    </div>
+                {{ else }}
+                    {{ if errors }}
+                        <div class="p-2 text-white bg-red-300 rounded-md">
+                            {{ errors }}
+                                {{ value }}<br>
+                            {{ /errors }}
+                        </div>
+                    {{ /if }}
+                    {{ fields }}
+                        <div class="p-2">
+                            <label class="hidden">{{ display }}</label>
+                            <div>{{ field }}</div>
+                            {{ if error }}
+                                <p class="text-gray-500">{{ error }}</p>
+                            {{ /if }}
+                        </div>
+                    {{ /fields }}
+
+                    <input type="text" class="hidden" name="{{ honeypot ?? 'honeypot' }}">
+
+                    <div class="mx-2">
+                        <button type="submit"
+                            class="w-full py-4 font-semibold text-white duration-300 ease-in-out bg-gray-900 border-2 border-gray-900 rounded-md hover:text-gray-900 hover:bg-white focus:outline-none px-7">
+                            Submit
+                        </button>
+                    </div>
+                {{ /if }}
+            {{ /form:contact_form }}
+        </div>
+    </div>
+</div>

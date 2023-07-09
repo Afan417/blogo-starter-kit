@@ -1,0 +1,23 @@
+@import '@fontsource-variable/inter';
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+[x-cloak] {
+    display: none !important;
+}
+
+/* Typograhpy Reset for Code */
+.prose code::before {
+    content: none !important;
+}
+.prose code::after {
+    content: none !important;
+}
+.prose blockquote> ::before {
+    content: none !important;
+}
+.prose blockquote> ::after {
+    content: none !important;
+}

@@ -1,0 +1,13 @@
+title: Pages
+template: pages/show
+layout: layout
+revisions: false
+route: '{parent_uri}/{slug}'
+sort_dir: asc
+preview_targets:
+  -
+    label: Entry
+    url: '{permalink}'
+    refresh: true
+structure:
+  root: true

@@ -1,0 +1,12 @@
+<div class="container py-8 md:py-12">
+    {{ partial:components/heading size="h2" label="Category: {title}" center="true" }}
+    {{ entries paginate="9" as="posts" }}
+        <div class="grid gap-12 mt-12 md:grid-cols-2 lg:grid-cols-3">
+            {{ posts }}
+                {{ partial:components/post_card }}
+            {{ /posts }}
+        </div>
+
+        {{ partial:partials/pagination }}
+    {{ /entries }}
+</div>

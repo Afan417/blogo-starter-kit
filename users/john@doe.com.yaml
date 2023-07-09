@@ -1,0 +1,5 @@
+super: true
+name: 'John Doe'
+avatar: user.jpg
+id: 5019d32a-932e-4e80-9d30-b60b20e24e87
+password_hash: $2y$10$jY5h0FteeKS/X8aLB6UfYuaNQU7QehITD8AkQZzJ1Wu6JMBeV5bEi

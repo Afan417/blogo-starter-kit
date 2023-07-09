@@ -1,0 +1,18 @@
+export_paths:
+  - content
+  - config/statamic/assets.php
+  - resources/blueprints
+  - resources/fieldsets
+  - resources/forms
+  - resources/css/site.css
+  - resources/js/site.js
+  - resources/views
+  - public/assets
+  - public/build
+  - package.json
+  - tailwind.config.js
+  - vite.config.js
+  - postcss.config.js
+  - routes/web.php
+  - users
+  - README.md

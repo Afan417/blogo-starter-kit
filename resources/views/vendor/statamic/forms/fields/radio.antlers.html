@@ -1,0 +1,16 @@
+{{ foreach:options as="option|label" }}
+    <label>
+        <input
+            type="radio"
+            name="{{ handle }}"
+            value="{{ option }}"
+            {{ if js_driver }}{{ js_attributes }}{{ /if }}
+            {{ if value == option }}checked{{ /if }}
+            {{ if validate|contains:required }}required{{ /if }}
+        >
+        {{ label !== null ? label : option }}
+    </label>
+    {{ unless inline }}
+        <br>
+    {{ /unless }}
+{{ /foreach:options }}

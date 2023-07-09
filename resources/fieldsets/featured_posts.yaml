@@ -1,0 +1,19 @@
+title: 'Featured Posts'
+fields:
+  -
+    handle: featured_posts
+    field:
+      mode: default
+      create: true
+      collections:
+        - posts
+      type: entries
+      display: 'Featured Posts'
+      icon: entries
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+      validate:
+        - required
+      max_items: 2

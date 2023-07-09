@@ -1,0 +1,12 @@
+{{ if categories }}
+    <div class="flex flex-wrap items-center justify-center space-x-6">
+        {{ categories }}
+            <a href="/categories/{{ slug }}" aria-label="{{ title }}">
+                <span
+                    class="inline-block px-3 py-2 text-xs font-medium tracking-wider text-indigo-700 uppercase rounded-md bg-indigo-50 hover:scale-105">
+                    {{ title }}
+                </span>
+            </a>
+        {{ /categories }}
+    </div>
+{{ /if }}

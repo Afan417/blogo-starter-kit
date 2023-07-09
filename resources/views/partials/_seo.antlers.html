@@ -1,0 +1,8 @@
+<meta name="description" content="{{ settings:meta_description ?? title }}">
+<meta property="og:title" content="{{ settings:site_name }} | {{ title }}" />
+<meta property="og:description" content="{{ settings:meta_description }}" />
+{{ if og_image }}
+    <meta property="og:image" content="{{ glide:og_image width="1200" }}">
+{{ elseif settings:og_image }}
+    <meta property="og:image" content="{{ glide:settings:og_image width="1200" }}">
+{{ /if }}

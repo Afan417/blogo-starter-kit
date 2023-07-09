@@ -1,0 +1,81 @@
+title: Content
+fields:
+  -
+    handle: content
+    field:
+      buttons:
+        - h2
+        - h3
+        - h4
+        - bold
+        - italic
+        - unorderedlist
+        - orderedlist
+        - removeformat
+        - quote
+        - anchor
+        - image
+        - table
+        - small
+        - underline
+        - strikethrough
+        - horizontalrule
+        - code
+        - alignleft
+        - aligncenter
+        - alignright
+        - alignjustify
+      smart_typography: false
+      save_html: false
+      inline: false
+      toolbar_mode: fixed
+      reading_time: false
+      fullscreen: true
+      allow_source: false
+      enable_input_rules: true
+      enable_paste_rules: true
+      remove_empty_nodes: false
+      antlers: false
+      link_noopener: false
+      link_noreferrer: false
+      target_blank: false
+      always_show_set_button: false
+      collapse: false
+      previews: true
+      type: bard
+      display: Content
+      icon: bard
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+      sets:
+        main:
+          display: Main
+          instructions: null
+          icon: null
+          sets:
+            image:
+              display: Image
+              instructions: null
+              icon: null
+              fields:
+                -
+                  handle: image
+                  field:
+                    mode: list
+                    container: assets
+                    restrict: false
+                    allow_uploads: true
+                    show_filename: true
+                    show_set_alt: true
+                    type: assets
+                    display: Image
+                    icon: assets
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    hide_display: false
+                    validate:
+                      - required
+                    max_files: 1

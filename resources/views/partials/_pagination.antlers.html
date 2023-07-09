@@ -1,0 +1,26 @@
+{{ paginate }}
+    {{ if next_page || prev_page }}
+        <div class="mt-12 md:mt-16">
+            <nav class="flex items-center justify-between bg-white md:py-6" aria-label="Pagination">
+                <div class="hidden sm:block">
+                    <p class="text-sm text-gray-700">
+                        <span class="font-medium">{{ current_page }}</span>
+                        of
+                        <span class="font-medium">{{ total_pages }}</span>
+                        pages
+                        (There are
+                        <span class="font-medium">{{ total_items }}</span>
+                        posts)
+                    </p>
+                </div>
+
+                <div class="flex justify-between flex-1 sm:justify-end">
+                    <a href="{{ prev_page }}" aria-label="Previous"
+                        class="relative inline-flex items-center px-3 py-2 text-sm font-semibold text-gray-900 bg-white rounded-md ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus-visible:outline-offset-0">Previous</a>
+                    <a href="{{ next_page }}" aria-label="Next"
+                        class="relative inline-flex items-center px-3 py-2 ml-3 text-sm font-semibold text-gray-900 bg-white rounded-md ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus-visible:outline-offset-0">Next</a>
+                </div>
+            </nav>
+        </div>
+    {{ /if }}
+{{ /paginate }}

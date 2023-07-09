@@ -1,0 +1,17 @@
+<input type="hidden" name="{{ handle }}[]">
+{{ foreach:options as="option|label" }}
+    <label>
+        <input
+            type="checkbox"
+            name="{{ handle }}[]"
+            value="{{ option }}"
+            {{ if js_driver }}{{ js_attributes }}{{ /if }}
+            {{ if value|in_array:option }}checked{{ /if }}
+            {{ if validate|contains:required }}required{{ /if }}
+        >
+        {{ label !== null ? label : option }}
+    </label>
+    {{ unless inline }}
+        <br>
+    {{ /unless }}
+{{ /foreach:options }}

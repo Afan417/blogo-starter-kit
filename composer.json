@@ -1,0 +1,9 @@
+{
+    "name": "my-vendor-name/blogo-starter-kit",
+    "extra": {
+        "statamic": {
+            "name": "Blogo Starter Kit",
+            "description": "Blogo Starter Kit starter kit"
+        }
+    }
+}

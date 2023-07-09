@@ -1,0 +1,19 @@
+<div class="container py-8 md:py-12">
+    {{ partial:components/heading size="h2" :label="title" center="true" }}
+    {{ if categories }}
+        <ul class="flex flex-wrap items-center justify-center mt-12">
+            {{ categories }}
+                <li class="mb-6 mr-6">
+                    <a href="{{ url }}" aria-label="{{ title }}"
+                        class="px-3 py-2 text-sm font-medium text-gray-500 transition-all border rounded-md hover:bg-indigo-100 hover:text-blue-500 hover:border-transparent">
+                        {{ title }}
+                    </a>
+                </li>
+            {{ /categories }}
+        </ul>
+    {{ else }}
+        <p class="flex items-center justify-center mt-12">
+            There are no categories.
+        </p>
+    {{ /if }}
+</div>

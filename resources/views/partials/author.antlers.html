@@ -1,0 +1,54 @@
+{{ if post_show }}
+    <div class="flex justify-center mt-3 space-x-3 text-gray-500">
+        <div class="flex items-center space-x-3">
+            {{ user }}
+                <div class="relative flex-shrink-0 w-10 h-10">
+                    <img src="{{ avatar ?? '/assets/placeholder-user.png' }}" alt="{{ alt ?? name }}"
+                        class="object-cover rounded-full"
+                        style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;">
+                </div>
+
+                <div>
+                    <p class="text-gray-500">
+                        {{ name }}
+                    </p>
+                    <div class="flex items-center space-x-2 text-sm">
+                        <div class="text-gray-500">
+                            <span class="pr-2">{{ date | format('F d, Y') }}</span>
+                            <span>·</span>
+                            <span class="pl-2">
+                                {{ content | raw | flatten | join | strip_tags | read_time(180) }} min read
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            {{ /user }}
+        </div>
+    </div>
+{{ else }}
+    <div class="flex flex-col space-x-3 md:items-center md:flex-row">
+        <div class="flex flex-wrap items-center space-x-3">
+            {{ user }}
+                <div class="relative flex-shrink-0 w-6 h-6 mt-4 md:mt-6">
+                    <img src="{{ avatar ?? '/assets/placeholder-user.png' }}" alt="{{ alt ?? name }}"
+                        class="object-cover rounded-full"
+                        style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;">
+                </div>
+                <div class="mt-4 text-gray-100 md:mt-6">
+                    {{ name }}
+                    <span class="inline pl-2"> ·</span>
+                </div>
+
+                <p class="mt-4 text-gray-100 md:mt-6">
+                    {{ date | format('F d, Y') }}
+                </p>
+
+                <div class="mt-4 text-gray-100 md:mt-6">
+                    · <span class="inline pl-2">
+                        {{ content | raw | flatten | join | strip_tags | read_time(180) }} min read
+                    </span>
+                </div>
+            {{ /user }}
+        </div>
+    </div>
+{{ /if }}

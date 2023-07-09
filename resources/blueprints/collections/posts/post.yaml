@@ -1,0 +1,59 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: featured_image
+            field:
+              mode: list
+              container: assets
+              restrict: false
+              allow_uploads: true
+              show_filename: true
+              show_set_alt: true
+              type: assets
+              display: 'Featured Image'
+              icon: assets
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              max_files: 1
+              validate:
+                - required
+          -
+            import: content
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+          -
+            handle: categories
+            field:
+              mode: select
+              create: true
+              taxonomies:
+                - categories
+              type: terms
+              display: Categories
+              icon: taxonomy
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+title: Post

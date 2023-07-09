@@ -1,0 +1,56 @@
+title: 'Page Builder'
+fields:
+  -
+    handle: blocks
+    field:
+      collapse: accordion
+      previews: true
+      fullscreen: true
+      sets:
+        main:
+          display: Main
+          instructions: null
+          icon: null
+          sets:
+            contact_section:
+              display: 'Contact Section'
+              instructions: null
+              icon: mail-sign-at
+              fields:
+                -
+                  import: contact_section
+            featured_post:
+              display: 'Featured Post'
+              instructions: null
+              icon: layout-split-verical
+              fields:
+                -
+                  import: featured_post
+            featured_posts:
+              display: 'Featured Posts'
+              instructions: null
+              icon: dashboard-layout
+              fields:
+                -
+                  import: featured_posts
+            all_posts:
+              display: 'All Posts'
+              instructions: null
+              icon: layout-grid-dots
+              fields:
+                -
+                  import: all_posts
+            content:
+              display: Content
+              instructions: null
+              icon: text-formatting-shadow-text
+              fields:
+                -
+                  import: content
+      type: replicator
+      display: Blocks
+      icon: replicator
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false

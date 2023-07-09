@@ -1,0 +1,81 @@
+title: 'Contact Section'
+fields:
+  -
+    import: rich_text
+  -
+    handle: contact_info
+    field:
+      collapse: false
+      previews: true
+      fullscreen: true
+      sets:
+        main:
+          display: Main
+          instructions: null
+          icon: null
+          sets:
+            contact:
+              display: Contact
+              instructions: null
+              icon: null
+              fields:
+                -
+                  handle: select_type
+                  field:
+                    options:
+                      location: Location
+                      email: Email
+                      phone: Phone
+                      text: Text
+                    taggable: false
+                    push_tags: false
+                    multiple: false
+                    max_items: 1
+                    clearable: false
+                    searchable: true
+                    cast_booleans: false
+                    default: email
+                    type: select
+                    display: 'Select Type'
+                    icon: select
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    hide_display: false
+                    width: 33
+                -
+                  handle: icon
+                  field:
+                    directory: public/assets/icons
+                    type: icon
+                    display: Icon
+                    icon: icon_picker
+                    width: 33
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    hide_display: false
+                    unless:
+                      select_type: 'equals text'
+                -
+                  handle: text
+                  field:
+                    input_type: text
+                    antlers: false
+                    type: text
+                    display: Text
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    hide_display: false
+                    validate:
+                      - required
+                    width: 33
+      type: replicator
+      display: 'Contact Info'
+      icon: replicator
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false

@@ -1,0 +1,14 @@
+{{ collection:posts as="posts" sort="random" limit="3" :id:not="id" }}
+    {{ if posts }}
+        <div class="bg-gray-50">
+            <div class="container py-8 md:py-12">
+                {{ partial:components/heading size="h3" label="Similiar Posts" class="mb-8 md:mb-12" }}
+                <div class="grid gap-12 md:grid-cols-2 lg:grid-cols-3">
+                    {{ posts }}
+                        {{ partial:components/post_card }}
+                    {{ /posts }}
+                </div>
+            </div>
+        </div>
+    {{ /if }}
+{{ /collection:posts }}

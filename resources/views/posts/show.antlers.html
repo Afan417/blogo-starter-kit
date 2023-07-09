@@ -1,0 +1,19 @@
+<div class="container py-8 md:py-12">
+    <div class="max-w-3xl mx-auto space-y-6">
+        {{ partial:partials/post_categories }}
+        {{ partial:components/heading size="h2" :label="title" center="true" }}
+        {{ partial:partials/author post_show="true" }}
+    </div>
+
+    {{# Featured Image #}}
+    <div class="relative z-0 max-w-6xl mx-auto my-8 overflow-hidden rounded-lg md:my-12 aspect-video">
+        <img src="{{ featured_image }}" alt="{{ alt ?? title }}" class="object-cover"
+            style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent">
+    </div>
+
+    {{ content }}
+        {{ partial src="sets/{type}" }}
+    {{ /content }}
+</div>
+
+{{ partial:partials/related_posts }}

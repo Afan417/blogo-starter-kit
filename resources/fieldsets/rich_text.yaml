@@ -1,0 +1,46 @@
+title: 'Rich Text'
+fields:
+  -
+    handle: rich_text
+    field:
+      buttons:
+        - h2
+        - h3
+        - h4
+        - h5
+        - h6
+        - bold
+        - italic
+        - unorderedlist
+        - orderedlist
+        - removeformat
+        - quote
+        - anchor
+        - image
+        - table
+        - underline
+        - strikethrough
+      smart_typography: false
+      save_html: false
+      inline: false
+      toolbar_mode: fixed
+      reading_time: false
+      fullscreen: true
+      allow_source: true
+      enable_input_rules: true
+      enable_paste_rules: true
+      remove_empty_nodes: false
+      antlers: false
+      link_noopener: false
+      link_noreferrer: false
+      target_blank: false
+      always_show_set_button: false
+      collapse: false
+      previews: true
+      type: bard
+      display: 'Rich Text'
+      icon: bard
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false

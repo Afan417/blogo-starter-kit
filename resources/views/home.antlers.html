@@ -1,0 +1,9 @@
+{{ if show_title }}
+    <div class="container pt-8 md:pt-12">
+        {{ partial:components/heading size="h2" :label="title" center="true" }}
+    </div>
+{{ /if }}
+
+{{ blocks }}
+    {{ partial src="sets/{type}" }}
+{{ /blocks }}

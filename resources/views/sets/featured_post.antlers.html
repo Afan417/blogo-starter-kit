@@ -1,0 +1,28 @@
+{{ featured_post }}
+    <div class="grid md:grid-cols-2 gap-5 md:gap-10 md:min-h-[calc(100vh-30vh)]"
+        style="background-color: {{ background_color ?? '#000000' }}">
+        {{# Image #}}
+        <div class="relative aspect-video md:aspect-auto">
+            <a href="{{ url }}" aria-label="{{ title }}">
+                {{ featured_image }}
+                    <img src="{{ url }}" alt="{{ alt ?? title }}" class="object-cover w-full h-auto" style="
+                    position: absolute;
+                    height: 100%;
+                    width: 100%;
+                    inset: 0px;
+                    color: transparent;
+                " />
+                {{ /featured_image }}
+            </a>
+        </div>
+
+        <div class="self-center px-5 pb-10">
+            <a href="{{ url }}" aria-label="{{ title }}">
+                <div class="max-w-3xl">
+                    {{ partial:components/heading size="h2" color="white" :label="title" class="my-3" }}
+                    {{ partial:partials/author }}
+                </div>
+            </a>
+        </div>
+    </div>
+{{ /featured_post }}

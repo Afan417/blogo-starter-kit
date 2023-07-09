@@ -1,0 +1,50 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: name
+            field:
+              input_type: text
+              placeholder: 'Full Name'
+              antlers: false
+              type: text
+              display: Name
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              validate:
+                - required
+          -
+            handle: email_address
+            field:
+              input_type: email
+              placeholder: 'Email Address'
+              antlers: false
+              type: text
+              display: 'Email Address'
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              validate:
+                - required
+          -
+            handle: message
+            field:
+              placeholder: 'Your Message'
+              antlers: false
+              type: textarea
+              display: Message
+              icon: textarea
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              validate:
+                - required
