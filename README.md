@@ -54,6 +54,14 @@ To compile for production again:
 npm run build
 ```
 
+### 3. Make a new user
+
+Create a new user via ``php please make:user``. You'll want to be a super admin so you have access to everything.
+
+### 4. Do your thing!
+
+If you're using [Laravel Valet](https://laravel.com/docs/valet) (or similar), your site should be available at `http://blog-site.test`. You can access the control panel at `http://blog-site.test/cp` and login with your new user. Open up the source code, follow along with the [Statamic 4 docs](https://statamic.dev), and enjoy!
+
 ## Contributing
 
 Contributions are always welcome, no matter how large or small, [here](https://github.com/afan417/blogo-starter-kit).
