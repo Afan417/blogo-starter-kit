@@ -1,7 +1,7 @@
 {{ if post_show }}
     <div class="flex justify-center mt-3 space-x-3 text-gray-500">
         <div class="flex items-center space-x-3">
-            {{ user }}
+            {{ author }}
                 <div class="relative flex-shrink-0 w-10 h-10">
                     <img src="{{ avatar ?? '/assets/placeholder-user.png' }}" alt="{{ alt ?? name }}"
                         class="object-cover rounded-full"
@@ -22,13 +22,13 @@
                         </div>
                     </div>
                 </div>
-            {{ /user }}
+            {{ /author }}
         </div>
     </div>
 {{ else }}
     <div class="flex flex-col space-x-3 md:items-center md:flex-row">
         <div class="flex flex-wrap items-center space-x-3">
-            {{ user }}
+            {{ author }}
                 <div class="relative flex-shrink-0 w-6 h-6 mt-4 md:mt-6">
                     <img src="{{ avatar ?? '/assets/placeholder-user.png' }}" alt="{{ alt ?? name }}"
                         class="object-cover rounded-full"
@@ -48,7 +48,7 @@
                         {{ content | raw | flatten | join | strip_tags | read_time(180) }} min read
                     </span>
                 </div>
-            {{ /user }}
+            {{ /author }}
         </div>
     </div>
 {{ /if }}

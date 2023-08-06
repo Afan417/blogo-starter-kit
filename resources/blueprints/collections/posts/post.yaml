@@ -43,17 +43,39 @@ tabs:
               type: slug
               localizable: true
           -
+            handle: author
+            field:
+              max_items: 1
+              mode: select
+              type: users
+              display: Author
+              icon: users
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              validate:
+                - required
+          -
             handle: categories
             field:
-              mode: select
-              create: true
+              type: terms
               taxonomies:
                 - categories
-              type: terms
               display: Categories
+              mode: select
+              create: true
               icon: taxonomy
               listable: hidden
               instructions_position: above
               visibility: visible
               hide_display: false
+          -
+            handle: date
+            field:
+              type: date
+              required: true
+              default: now
+              validate:
+                - required
 title: Post

@@ -33,8 +33,8 @@ data:
             -
               type: link
               attrs:
-                href: 'https://github.com/afan417/blogo'
-                rel: noopener
+                href: 'https://github.com/afan417/blogo-starter-kit'
+                rel: null
                 target: _blank
                 title: null
           text: Github
