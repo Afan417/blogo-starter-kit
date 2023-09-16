@@ -4,9 +4,11 @@
 </h1>
 
 ![Statamic 4+](https://img.shields.io/badge/Statamic-4+-FF269E?style=for-the-badge&link=https://statamic.com)
+
 <!-- /statamic:hide -->
 
 ## Features
+
 - Markdown with Bard, for writing experience
 - Categories taxonomy for Posts
 - Dynamic Pages structure
@@ -16,6 +18,7 @@
 - Native Search
 
 ## Stack
+
 - [Alpine JS](https://alpinejs.dev) for interactions
 - Built with [Tailwind CSS](https://tailwindcss.com)
 - Compiled with [Vite](https://vitejs.dev)
@@ -23,7 +26,6 @@
 ## Screenshot
 
 ![Screenshot](https://i.imgur.com/6RKCC7Q.png)
-
 
 ## Quick Start
 
@@ -41,7 +43,6 @@ Or you can install manually into a fresh [Statamic installation](https://statami
 php please starter-kit:install afan417/blogo-starter-kit --clear-site
 ```
 
-
 ### 2. Install dependencies
 
 ```
@@ -56,7 +57,13 @@ npm run build
 
 ### 3. Make a new user
 
-Create a new user via ``php please make:user``. You'll want to be a super admin so you have access to everything.
+Note: This starter kit comes with a super-user already created. You can delete this user after you finish the installation process. You might need to enable Statamic Pro temporarily for this. Read [here](https://statamic.dev/tips/how-to-enable-statamic-pro).
+
+Username: `john@doe.com`
+
+Password: `password`
+
+Create a new user via `php please make:user`. You'll want to be a super admin so you have access to everything.
 
 ### 4. Do your thing!
 
