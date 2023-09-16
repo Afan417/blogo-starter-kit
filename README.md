@@ -56,6 +56,11 @@ npm run build
 
 ### 3. Make a new user
 
+Note: This starter kit comes with a super-user already created. You can delete this user after you finish the installation process. You might need to enable Statamic Pro temporarily for this.
+
+Username: ``john@doe.com``
+Password: ``password``
+
 Create a new user via ``php please make:user``. You'll want to be a super admin so you have access to everything.
 
 ### 4. Do your thing!
