@@ -2,97 +2,16 @@
     <nav x-data="{ isMobile: false, showMobileNav: false }" x-screen="isMobile = ($width < 1024)" x-cloak
         class="container flex flex-wrap items-center justify-between py-5 lg:py-6">
         <div class="antialiased font-medium text-md max-w-[200px] lg:w-[200px]">
-            <a href="/" aria-label="{{ settings:site_name }}" class="block mr-12 text-xl font-black lg:inline-block">
-                {{ if settings:logo }}
-                    <img src="{{ settings:logo }}" alt="{{ alt ?? 'Logo' }}" class="max-h-8">
-                {{ else }}
-                    {{ settings:site_name }}
-                {{ /if }}
-            </a>
+            {{ partial:layout/navigation/logo }}
         </div>
 
-        <div class="block lg:hidden">
-            <button class="flex items-center p-3 text-gray-800" x-bind:class="{'hidden': showMobileNav}"
-                @click="showMobileNav = true">
-                <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <title>Open Menu</title>
-                    <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-                </svg>
-            </button>
-            <button class="items-center p-3 text-gray-800"
-                x-bind:class="{'flex': showMobileNav, 'hidden': ! showMobileNav}" @click="showMobileNav = false"
-                x-cloak>
-                <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <title>Close Menu</title>
-                    <path
-                        d="M10 8.586L2.929 1.515 1.515 2.929 8.586 10l-7.071 7.071 1.414 1.414L10 11.414l7.071 7.071 1.414-1.414L11.414 10l7.071-7.071-1.414-1.414L10 8.586z" />
-                </svg>
-            </button>
-        </div>
+        <!-- Toggle Button (mobile) -->
+        {{ partial:layout/navigation/toggle }}
 
         <!-- Mobile -->
-        <template x-if="isMobile">
-            <div class="items-center w-full" x-show="showMobileNav" @click.outside="showMobileNav = false">
-                <ul class="my-2 divide-y">
-                    {{ nav:navigation }}
-                        <li>
-                            <a href="{{ url }}" aria-label="{{ title }}" class="pr-5 py-4 border-b last:border-b-0 font-medium text-gray-800 hover:text-blue-500 transition-all
-                    block {{ is_current || is_parent ?= 'text-blue-500' }}">
-                                {{ title }}
-                            </a>
-                        </li>
-                    {{ /nav:navigation }}
-                </ul>
-
-                <form action="/search">
-                    <div class="relative">
-                        <input type="search" name="q" id="q" value="{{ get:q }}" required placeholder="Search"
-                            class="w-full py-2 pr-3 border rounded-md outline-none pl-9 hover:border-gray-300 focus:outline-none focus:ring-1 focus:ring-gray-800 focus:shadow-sm">
-
-                        <button type="submit" class="absolute inset-y-0 left-0 flex items-center pl-3">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                stroke="currentColor" aria-hidden="true" class="w-4 h-4 text-gray-400">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z">
-                                </path>
-                            </svg>
-                        </button>
-                    </div>
-                </form>
-            </div>
-        </template>
+        {{ partial:layout/navigation/mobile }}
 
         <!-- Desktop -->
-        <template x-if="!isMobile">
-            <ul class="hidden lg:w-auto lg:flex lg:items-center">
-                {{ nav:navigation }}
-                    <li>
-                        <a href="{{ url }}" aria-label="{{ title }}" class="px-5 py-2 font-medium text-gray-800 hover:text-blue-500 transition-all
-                    block {{ is_current || is_parent ?= 'text-blue-500' }}">
-                            {{ title }}
-                        </a>
-                    </li>
-                {{ /nav:navigation }}
-            </ul>
-        </template>
-
-        <!-- Desktop Search -->
-        <template x-if="!isMobile">
-            <form action="/search" class="hidden lg:block lg:max-w-[200px]">
-                <div class="relative">
-                    <input type="search" name="q" id="q" value="{{ get:q }}" required placeholder="Search"
-                        class="w-full py-2 pr-3 border rounded-md outline-none pl-9 hover:border-gray-300 focus:outline-none focus:ring-1 focus:ring-gray-800 focus:shadow-sm">
-
-                    <button type="submit" class="absolute inset-y-0 left-0 flex items-center pl-3">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor" aria-hidden="true" class="w-4 h-4 text-gray-400">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z">
-                            </path>
-                        </svg>
-                    </button>
-                </div>
-            </form>
-        </template>
+        {{ partial:layout/navigation/desktop }}
     </nav>
 </div>

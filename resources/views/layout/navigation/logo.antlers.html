@@ -1,0 +1,7 @@
+<a href="/" aria-label="{{ settings:site_name }}" class="block mr-12 text-xl font-black lg:inline-block">
+    {{ if settings:logo }}
+        <img src="{{ settings:logo }}" alt="{{ alt ?? 'Logo' }}" class="max-h-8">
+    {{ else }}
+        {{ settings:site_name }}
+    {{ /if }}
+</a>
