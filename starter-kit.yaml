@@ -6,6 +6,7 @@ export_paths:
   - resources/forms
   - resources/css/site.css
   - resources/js/site.js
+  - resources/sites.yaml
   - resources/views
   - public/assets
   - public/build
