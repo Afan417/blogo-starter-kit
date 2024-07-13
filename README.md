@@ -49,7 +49,7 @@ php please starter-kit:install afan417/blogo-starter-kit --clear-site
 npm i && npm run dev
 ```
 
-To compile for production again:
+To compile for production:
 
 ```
 npm run build
@@ -57,7 +57,7 @@ npm run build
 
 ### 3. Make a new user
 
-Note: This starter kit comes with a super-user already created. You can delete this user after you finish the installation process. You might need to enable Statamic Pro temporarily for this. Read [here](https://statamic.dev/tips/how-to-enable-statamic-pro).
+> Note: This starter kit comes with a super-user already created. You can delete this user after you finish the installation process. You might need to enable Statamic Pro temporarily for this. Read [here](https://statamic.dev/tips/how-to-enable-statamic-pro).
 
 Username: `john@doe.com`
 
