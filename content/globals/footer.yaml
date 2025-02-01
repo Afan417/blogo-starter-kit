@@ -6,7 +6,7 @@ data:
       content:
         -
           type: text
-          text: 'Copyright © 2023 Blogo. All rights reserved.'
+          text: 'Copyright © {{ now format="Y" }} Blogo. All rights reserved.'
     -
       type: paragraph
       content:
