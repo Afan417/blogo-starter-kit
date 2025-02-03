@@ -3,7 +3,7 @@
   Blogo Starter Kit
 </h1>
 
-![Statamic 4+](https://img.shields.io/badge/Statamic-4+-FF269E?style=for-the-badge&link=https://statamic.com)
+![Statamic 5+](https://img.shields.io/badge/Statamic-5+-FF269E?style=for-the-badge&link=https://statamic.com)
 
 <!-- /statamic:hide -->
 
@@ -67,7 +67,7 @@ Create a new user via `php please make:user`. You'll want to be a super admin so
 
 ### 4. Do your thing!
 
-If you're using [Laravel Valet](https://laravel.com/docs/valet) (or similar), your site should be available at `http://blog-site.test`. You can access the control panel at `http://blog-site.test/cp` and login with your new user. Open up the source code, follow along with the [Statamic 4 docs](https://statamic.dev), and enjoy!
+If you're using [Laravel Valet](https://laravel.com/docs/valet) (or similar), your site should be available at `http://blog-site.test`. You can access the control panel at `http://blog-site.test/cp` and login with your new user. Open up the source code, follow along with the [Statamic 5 docs](https://statamic.dev), and enjoy!
 
 ## Contributing
 
