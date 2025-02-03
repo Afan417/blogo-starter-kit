@@ -16,4 +16,5 @@ export_paths:
   - postcss.config.js
   - routes/web.php
   - users
+  - .env.example
   - README.md
